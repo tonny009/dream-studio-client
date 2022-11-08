@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 import ServiceCard from '../ServiceCard/ServiceCard';
 import About from './About/About';
 import Banner from './Banner/Banner';
 import MsgSend from './MsgSend';
 
 const Home = () => {
+
+    useTitle('DS/Home')
 
     const [services, setServices] = useState([])
     useEffect(() => {
@@ -25,6 +29,9 @@ const Home = () => {
                     {
                         services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
                     }
+                </div>
+                <div>
+                    <button className="btn btn-primary"><Link to={`/services`}>View All Services</Link></button>
                 </div>
             </div>
 

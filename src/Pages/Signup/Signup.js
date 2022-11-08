@@ -3,8 +3,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 import { setAuthToken } from './GettokenCmnCode';
 import img from '../../assets/register.jpg'
+import useTitle from '../../hooks/useTitle';
 
 const Signup = () => {
+
+    useTitle('DS/SignUp')
+
     const navigate = useNavigate()
     const [error, setError] = useState('');
     const [registerSuccess, setRegisterSuccess] = useState('');

@@ -3,6 +3,8 @@ import { Image } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
 import { AuthContext } from '../../Context/AuthProvider';
+import logo from '../../assets/photo-icon.png'
+import './Header.css'
 
 const Header = () => {
     const navigate = useNavigate();
@@ -44,7 +46,9 @@ const Header = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-3xl">Dream Studio</a>
+
+                <a className="btn btn-ghost normal-case text-3xl"><img className="logo-img" src={logo} alt="" srcset="" />Dream Studio</a>
+
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

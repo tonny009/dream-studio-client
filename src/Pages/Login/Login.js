@@ -3,8 +3,11 @@ import { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logImg from '../../assets/login.jpg'
 import { AuthContext } from '../../Context/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
+
+    useTitle('DS/Login')
     const navigate = useNavigate()
     const { signIn } = useContext(AuthContext);
     const location = useLocation();
