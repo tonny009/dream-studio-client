@@ -4,7 +4,9 @@ import AddService from "../Pages/AddService/AddService";
 import Blog from "../Pages/Blog/Blog";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
+import PrivateRoute from '../Routes/PrivateRoute'
 import MyReviews from "../Pages/MyReviews/MyReviews";
+import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import Signup from "../Pages/Signup/Signup";
 
 export const routes = createBrowserRouter([
@@ -14,6 +16,11 @@ export const routes = createBrowserRouter([
         children: [
             {
                 path: '/',
+                element: <Home></Home>,
+                // loader: () => fetch('https://web-development-course-seven.vercel.app/new-courses')
+            },
+            {
+                path: '/home',
                 element: <Home></Home>,
                 // loader: () => fetch('https://web-development-course-seven.vercel.app/new-courses')
             },
@@ -31,11 +38,15 @@ export const routes = createBrowserRouter([
             },
             {
                 path: 'myReviews',
-                element: <MyReviews></MyReviews>
+                element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
             },
             {
                 path: 'addService',
-                element: <AddService></AddService>
+                element: <PrivateRoute><AddService></AddService></PrivateRoute>
+            },
+            {
+                path: 'servicedetails/:id',
+                element: <ServiceDetails></ServiceDetails>
             },
 
             // {

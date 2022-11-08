@@ -34,7 +34,7 @@ const Header = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100 mb-12">
+        <div className="navbar bg-base-100 mb-3 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -44,7 +44,7 @@ const Header = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <a className="btn btn-ghost normal-case text-3xl">Dream Studio</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
@@ -59,7 +59,7 @@ const Header = () => {
                                 {user?.photoURL ?
                                     <Image
                                         style={{ height: '40px', marginRight: '8px' }}
-                                        roundedCircle
+                                        rounded
                                         src={user?.photoURL}
                                         data-toggle="tooltip" data-placement="top" title={user?.displayName}
                                     >
