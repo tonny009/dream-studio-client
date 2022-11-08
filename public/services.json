@@ -1,0 +1,56 @@
+[
+    {
+        "serviceName": "Model Photography",
+        "price": 420,
+        "serviceDays": 3,
+        "ratings": 4,
+        "serviceGiven": 37,
+        "img": "https://sunbouncepro.com/wp-content/uploads/2010/11/dilira_headshot.jpg",
+        "description": "Popular culture, trends, seasons, and colours are central themes in photography. Models of elite proportions are used in eclectic, exaggerated poses in high fashion images, which transcend the average editorial. With our indoor photo shoot rentals, we offer the best prices. With our photography rental space, we provide you with the best photography equipment and the chance to set your desired theme and background. By investing just a little in studio equipment and space, you’ll be able to bring out the best in your photography skills. In India, we are among the top ten best model photographers.Model Photography projects have different purposes, and we understand that perfectly. This may call for an advertisement campaign for Fashion, a promotion for Garment/Footwear, and a campaign for Jewellery/Accessories. In this manner, we ensure that your product is accurately represented. The style of every brand is unique and should be reflected in every photograph. Our photographers plan your upcoming shoot so that your true brand concept and your idea can be fully presented by combining the right vision and high-end equipment. Our studio takes pride in completing all work professionally, within set timeframes, and most importantly, on budget."
+    },
+    {
+        "serviceName": "Wedding Photography",
+        "price": 600,
+        "serviceDays": 4,
+        "ratings": 5,
+        "serviceGiven": 20,
+        "img": "https://imagesawe.s3.amazonaws.com/styles/max750/s3/articles/2021/07/wedding-photography.jpg?itok=xACWpP6A",
+        "description": "This totally bespoke wedding photography service is specifically tailored to meet each couple’s preferences and individual needs. Rather than standard packages, there is a range of customisable services to choose from to build a solution that matches your plans and wishes perfectly. Designed to be simple and flexible, the adjustable structure fits ideally to any size and type of event, whether big or small.Once you have seen the resulting images afterwards, you can choose to purchase as many, or as few, of them as you would like. The images you choose are the only thing you will need pay for.An optional album design service is also available upon additional request. The bespoke album designs are custom built to showcase your favourite images in a unique and elegant way"
+    },
+    {
+        "serviceName": "Couple Photoshoot",
+        "price": 180,
+        "serviceDays": 1,
+        "ratings": 4.5,
+        "serviceGiven": 56,
+        "img": "https://i0.wp.com/tulum-photography.com/wp-content/uploads/2021/11/Webpage_couples_0001-1.jpg?fit=1024%2C683&ssl=1",
+        "description": "Tell the story of your relationship with stunning images that you will be proud to display in your home, to show to your friends, and to be treasured by your family for generations to come.We want you to be relaxed and comfortable with us, and we take care to build your confidence and gently guide you where necessary.No two couples are alike, and we work hard to make sure we treat your Tulum Couples Photoshoot with the utmost attention and respect. Please connect with us, and let's discuss your Tulum Couples Photoshoot and how best we can tell your story."
+    },
+    {
+        "serviceName": "Portrait Photographer",
+        "price": 690,
+        "serviceDays": 1,
+        "ratings": 4.9,
+        "serviceGiven": 10,
+        "img": "https://jfanphoto.com/wp-content/uploads/2020/08/realtor-headshot-photorgaphy-safety-harbor--720x481.jpg",
+        "description": "Our years as a portrait photographers and hundreds of shoots across multiple genres and settings have equipped us with the versatility to ensure that we deliver a set of portrait images that is YOU.No two Portrait Photoshoots are alike, and we work hard to make sure we treat your portrait photoshoot with the utmost attention and respect. "
+    },
+    {
+        "serviceName": "Family Photography",
+        "price": 390,
+        "serviceDays": 2,
+        "ratings": 4,
+        "serviceGiven": 40,
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3MEvvkpu4cPscII0MigwNoYC_QrEiPHiyXQ&usqp=CAU",
+        "description": "Each family has a unique personality and dynamic. At my Photography, we love to capture what makes your family different. Every session is tailored to suit your and your loved ones’ wants and needs to truly reflect who you all are.We do milestone photographs, family portraits, holiday photos, and even “just because” photoshoots. No matter what reason you decide to schedule a shoot, Jonathan Fanning will display your family’s bond and love with images that you’ll cherish for years to come. Schedule a family photoshoot today!"
+    },
+    {
+        "serviceName": "Photography Online Training",
+        "price": 720,
+        "serviceDays": 30,
+        "ratings": 4.6,
+        "serviceGiven": 900,
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSYpu-utzWask7Oj66Lf3zWFdniD8PvLL9-A&usqp=CAU",
+        "description": "We have been teaching photography since 2002. Our courses are designed to take beginners to an advanced level or fill in the gaps that the more experienced photographer may have. Clear up confusion and create stunning imagery with structured professional teaching. We are giving this service through the world and provide the best in professional training worldwide.Our most popular online course taking people with little or no knowledge, to extremely competent photographers. Learn how to control exposure, depth of field, movement, ISO and much more. Your journey to better photography starts here"
+    }
+]
