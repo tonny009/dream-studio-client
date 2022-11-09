@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const MyReviewRow = ({ eachReview, handleDelete }) => {
+const MyReviewRow = ({ eachReview, handleDelete, handleStatusUpdate }) => {
     const { _id, serviceName, review, serviceId, reviewerName, reviewerImg } = eachReview;
     return (
         <tr>
@@ -24,6 +25,7 @@ const MyReviewRow = ({ eachReview, handleDelete }) => {
             </td>
             <td>
                 <button onClick={() => handleDelete(_id)} className='btn btn-ghost'>X</button>
+                <button className='btn btn-ghost'><Link to={`/update/${_id}`}>Edit</Link></button>
             </td>
 
         </tr>

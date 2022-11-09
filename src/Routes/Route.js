@@ -10,6 +10,7 @@ import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import Signup from "../Pages/Signup/Signup";
 import Services from "../Pages/Services/Services";
 import CommentForm from '../Pages/CommentForm/CommentForm'
+import UpdateForm from "../Pages/MyReviews/UpdateForm/UpdateForm";
 
 export const routes = createBrowserRouter([
     {
@@ -61,9 +62,14 @@ export const routes = createBrowserRouter([
                 element: <PrivateRoute><CommentForm></CommentForm></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/service-details/${params.id}`)
 
-
+            },
+            {
+                path: 'update/:id',
+                element: <PrivateRoute><UpdateForm></UpdateForm></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
 
             },
+
 
             // {
             //     path: '/details/:id',

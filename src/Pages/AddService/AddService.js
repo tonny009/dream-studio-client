@@ -1,3 +1,4 @@
+import { neutral } from 'daisyui/src/colors/colorNames';
 import React, { useContext } from 'react';
 import { Button, Form } from 'react-bootstrap';
 
@@ -17,13 +18,15 @@ const AddService = () => {
         const serviceGiven = form.totaldone.value;
         const serviceName = form.srvcName.value;
         const img = form.image.value;
+        const description = form.details.value
 
         const fullService = {
             serviceName,
             price,
             serviceDays,
             serviceGiven,
-            img
+            img,
+            description
         }
 
         fetch('http://localhost:5000/services', {
@@ -70,6 +73,10 @@ const AddService = () => {
                 <Form.Group className="mb-3 " controlId="formBasicEmail">
                     <Form.Label ><strong>Service Image: </strong></Form.Label>
                     <Form.Control className='p-2' required name="image" type="text" placeholder="Give Photo URL" />
+                </Form.Group>
+                <Form.Group className="mb-3 " controlId="exampleForm.ControlTextarea1">
+                    <Form.Label><strong>Description :</strong></Form.Label>
+                    <Form.Control required name="details" as="textarea" className='textarea textarea-info w-80' rows={3} />
                 </Form.Group>
 
 
