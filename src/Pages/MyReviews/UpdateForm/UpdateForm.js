@@ -12,7 +12,7 @@ const UpdateForm = () => {
 
     // This portion is extra for getting all my reviews so that we can set new updated review with it---------
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`
+        fetch(`https://photography-service-review-server.vercel.app/reviews?email=${user?.email}`
             // {
             //     headers: {
             //         authorization: `Bearer ${localStorage.getItem('genius-token')}`
@@ -29,7 +29,7 @@ const UpdateForm = () => {
         const form = event.target;
         const updatedreview = form.rvwText.value;
 
-        fetch(`http://localhost:5000/reviews/${_id}`, {
+        fetch(`https://photography-service-review-server.vercel.app/reviews/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

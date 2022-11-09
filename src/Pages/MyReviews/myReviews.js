@@ -10,7 +10,7 @@ const MyReviews = () => {
 
     useEffect(() => {
         //here I did mistake that in url instead of Email I write email , as in collection the property is named Email 
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`,
+        fetch(`https://photography-service-review-server.vercel.app/reviews?email=${user?.email}`,
             {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('genius-token')}`
@@ -29,7 +29,7 @@ const MyReviews = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this review?');
         if (proceed) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://photography-service-review-server.vercel.app/reviews/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -47,7 +47,7 @@ const MyReviews = () => {
     }
 
     // const handleStatusUpdate = id => {
-    //     fetch(`http://localhost:5000/reviews/${id}`, {
+    //     fetch(`https://photography-service-review-server.vercel.app/reviews/${id}`, {
     //         method: 'PATCH',
     //         headers: {
     //             'content-type': 'application/json'

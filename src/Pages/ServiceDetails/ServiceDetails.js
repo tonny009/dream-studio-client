@@ -19,7 +19,7 @@ const ServiceDetails = () => {
     // we are sending serviceid as query value to fetch data of that service id---
     useEffect(() => {
         //here I did mistake that in url instead of Email I write email , as in collection the property is named Email 
-        fetch(`http://localhost:5000/reviewsAll?serviceId=${_id}`)
+        fetch(`https://photography-service-review-server.vercel.app/reviewsAll?serviceId=${_id}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])

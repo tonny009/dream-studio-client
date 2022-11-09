@@ -42,7 +42,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/services',
                 element: <Services></Services>,
-                loader: () => fetch('http://localhost:5000/services')
+                loader: () => fetch('https://photography-service-review-server.vercel.app/services')
             },
             {
                 path: 'myReviews',
@@ -55,18 +55,18 @@ export const routes = createBrowserRouter([
             {
                 path: 'servicedetails/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/service-details/${params.id}`)
+                loader: ({ params }) => fetch(`https://photography-service-review-server.vercel.app/service-details/${params.id}`)
             },
             {
                 path: 'commentform/:id',
                 element: <PrivateRoute><CommentForm></CommentForm></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/service-details/${params.id}`)
+                loader: ({ params }) => fetch(`https://photography-service-review-server.vercel.app/service-details/${params.id}`)
 
             },
             {
                 path: 'update/:id',
                 element: <PrivateRoute><UpdateForm></UpdateForm></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://photography-service-review-server.vercel.app/reviews/${params.id}`)
 
             },
 
