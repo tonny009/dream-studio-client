@@ -25,7 +25,7 @@ const ServiceDetails = () => {
     }, [])
 
     return (
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mt-8">
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mt-8 mb-8">
             <div className="grid gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-1 details">
                 <div>
                     <PhotoProvider>
@@ -33,7 +33,6 @@ const ServiceDetails = () => {
                             <figure><img className='w-64 rounded-lg  pl-6' src={img} alt="Album" /></figure>
                         </PhotoView>
                     </PhotoProvider>
-                    {/* <figure><img className='w-64 rounded-lg  pl-6' src={img} alt="Album" /></figure> */}
                 </div>
 
                 <div className="card-body">
@@ -64,7 +63,10 @@ const ServiceDetails = () => {
 
                     </table>
                 </div>
-                <button className="btn btn-primary"><Link to={`/commentform/${_id}`}>Add Comment</Link></button>
+                <div className='cmnt-btn mt-4'>
+                    <button className="btn btn-primary  "><Link to={`/commentform/${_id}`}>Add Your Review</Link></button>
+                </div>
+
             </div>
 
         </div>

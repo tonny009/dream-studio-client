@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const MyReviewRow = ({ eachReview, handleDelete, handleStatusUpdate }) => {
-    const { _id, serviceName, review, serviceId, reviewerName, reviewerImg } = eachReview;
+    const { _id, serviceName, review, serviceId, reviewerName, reviewerImg, date } = eachReview;
     return (
         <tr>
             <td>
@@ -21,6 +21,7 @@ const MyReviewRow = ({ eachReview, handleDelete, handleStatusUpdate }) => {
             </td>
             <td>
                 {review}
+                <p>{date}</p>
 
             </td>
             <td>

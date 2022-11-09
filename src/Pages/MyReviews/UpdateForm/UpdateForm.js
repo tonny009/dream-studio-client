@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useLoaderData } from 'react-router-dom';
+import { Navigate, useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 
 const UpdateForm = () => {
     const { user } = useContext(AuthContext)
     const review = useLoaderData();
+    const navigate = useNavigate()
     const { _id } = review;
     const [Reviews, setUpdatedReview] = useState([]);
 
@@ -37,13 +38,18 @@ const UpdateForm = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 form.reset();
+                console.log(data);
+                if (data.acknowledged) {
+                    alert('Your Review Updated.')
+                    form.reset();
+                }
                 if (data.modifiedCount > 0) {
                     const remaining = Reviews.filter(rvws => rvws._id !== _id);
                     const updated = Reviews.find(rvw => rvw._id === _id);
                     const newReviews = [updated, ...remaining];
                     setUpdatedReview(newReviews);
+
                 }
             })
     }

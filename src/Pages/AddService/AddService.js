@@ -51,7 +51,7 @@ const AddService = () => {
 
     return (
         <div className='mb-9'>
-            <h2 className='text-2xl font-bold text-center w-auto rvw-title p-2 mb-10'>Add Your Review Here</h2>
+            <h2 className='text-2xl font-bold text-center w-auto rvw-title p-2 mb-10'>Add New Service Here</h2>
             <Form onSubmit={handleSubmit} className='rvw-form w-96 mx-auto p-5'>
 
                 <Form.Group className="mb-3 " controlId="formBasicEmail">
