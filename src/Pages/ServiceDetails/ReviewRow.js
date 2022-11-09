@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ReviewRow = ({ eachReview }) => {
-    const { _id, serviceName, review, serviceId, reviewerName, reviewerImg } = eachReview;
+    const { _id, serviceName, review, serviceId, reviewerName, reviewerImg, date } = eachReview;
     return (
         <tr>
             <td>
@@ -19,6 +19,7 @@ const ReviewRow = ({ eachReview }) => {
             </td>
             <td>
                 {review}
+                <p>{date}</p>
                 <br />
             </td>
 

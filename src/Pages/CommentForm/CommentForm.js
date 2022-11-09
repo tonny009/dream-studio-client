@@ -22,6 +22,7 @@ const CommentForm = (props) => {
         const reviewerImg = user.photoURL;
         const serviceName = form.srvcName.value;
         const serviceId = _id;
+        const date = new Date();
 
         const fullReview = {
             serviceName,
@@ -29,7 +30,7 @@ const CommentForm = (props) => {
             serviceId,
             reviewerName,
             reviewerImg,
-            email
+            email, date
         }
 
         fetch('http://localhost:5000/reviews', {

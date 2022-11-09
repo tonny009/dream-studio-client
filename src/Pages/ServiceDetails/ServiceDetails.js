@@ -26,8 +26,6 @@ const ServiceDetails = () => {
 
     return (
         <div className="grid gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mt-8">
-
-
             <div className="grid gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-1 details">
                 <div>
                     <PhotoProvider>
