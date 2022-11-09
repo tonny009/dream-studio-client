@@ -10,14 +10,19 @@ const MyReviews = () => {
 
     useEffect(() => {
         //here I did mistake that in url instead of Email I write email , as in collection the property is named Email 
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`
-            // {
-            //     headers: {
-            //         authorization: `Bearer ${localStorage.getItem('genius-token')}`
-            //     }
-            // }
+        fetch(`http://localhost:5000/reviews?email=${user?.email}`,
+            {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('genius-token')}`
+                }
+            }
         )
-            .then(res => res.json())
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    return logOut();
+                }
+                return res.json()
+            })
             .then(data => setReviews(data))
     }, [user?.email])
 
