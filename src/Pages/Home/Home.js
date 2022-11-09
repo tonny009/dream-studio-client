@@ -8,11 +8,11 @@ import MsgSend from './MsgSend';
 
 const Home = () => {
 
-    useTitle('DS/Home')
+    useTitle('Home')
 
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('http://localhost:5000/serviceshome')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
@@ -23,14 +23,14 @@ const Home = () => {
             <br></br>
 
             {/* Services sector---------- */}
-            <div className='w-full bg-base-200'>
+            <div className='w-full bg-base-200 mb-8 pb-5'>
                 <h2 className='text-center font-extrabold text-3xl'>Our Services</h2>
                 <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
                     {
                         services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
                     }
                 </div>
-                <div>
+                <div className='text-center mt-8'>
                     <button className="btn btn-primary"><Link to={`/services`}>View All Services</Link></button>
                 </div>
             </div>

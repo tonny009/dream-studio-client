@@ -1,0 +1,34 @@
+[
+    {
+        "serviceName": "Family Photography",
+        "review": "Their service are best! They are too much friendly and dedicated.",
+        "serviceId": "6369adb4037bbfbdd709bf6d",
+        "reviewerName": "Shahima Islam",
+        "reviewerImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn7rKQQacV4P7rw9yeEoYaxJEWn7CzbgIQ4Q&usqp=CAU",
+        "email": "shamima@gmail.com"
+    },
+    {
+        "serviceName": "Wedding Photography",
+        "review": "They are too much friendly and the photographs are best.",
+        "serviceId": "6369adb4037bbfbdd709bf6a",
+        "reviewerName": "Opi Karim",
+        "reviewerImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIb1pV8ElSVyOfiP4Tgji-dEQu8XnT8mN27GPdrlkiMUlQs5RFnBRkT3AfEIADW_m6IsE&usqp=CAU",
+        "email": "opi@gmail.com"
+    },
+    {
+        "serviceName": "Couple Photoshoot",
+        "review": "Amazing clicks !! Good Job..",
+        "serviceId": "6369adb4037bbfbdd709bf6b",
+        "reviewerName": "Azad Khan",
+        "reviewerImg": "https://filmfare.wwmindia.com/content/2020/aug/sidharthmalhotra11598531374.jpg",
+        "email": "azad@gmail.com"
+    },
+    {
+        "serviceName": "Model Photography",
+        "review": "The photographs are best.",
+        "serviceId": "6369adb4037bbfbdd709bf69",
+        "reviewerName": "Sabila Nur",
+        "reviewerImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFViqujmDqoytgAT04HRAhp7_scSSrJ1ivPQ&usqp=CAU",
+        "email": "sabila@gmail.com"
+    }
+]

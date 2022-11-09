@@ -58,7 +58,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: 'commentform/:id',
-                element: <CommentForm></CommentForm>,
+                element: <PrivateRoute><CommentForm></CommentForm></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/service-details/${params.id}`)
 
 

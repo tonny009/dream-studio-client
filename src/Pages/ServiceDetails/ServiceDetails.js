@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import useTitle from '../../hooks/useTitle';
 import './ServiceDetails.css'
+import { AuthContext } from '../../Context/AuthProvider';
+import ReviewRow from './ReviewRow';
 
 const ServiceDetails = () => {
-    useTitle('DS/ServiceDetails')
+    useTitle('ServiceDetails')
+
+    const { user, logOut } = useContext(AuthContext);
+    const [reviews, setReviews] = useState([])
+
     const serviceDetails = useLoaderData();
     const { serviceName, price, serviceDays, ratings, _id, serviceGiven, description, img } = serviceDetails
+
+    // we are sending serviceid as query value to fetch data of that service id---
+    useEffect(() => {
+        //here I did mistake that in url instead of Email I write email , as in collection the property is named Email 
+        fetch(`http://localhost:5000/reviews?serviceId=${_id}`)
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
 
     return (
         <div className="grid gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mt-8">
@@ -28,7 +42,23 @@ const ServiceDetails = () => {
 
 
             <div>
-                <h2>Review section</h2>
+                <div className="overflow-x-auto w-full">
+                    <table className="table w-full">
+                        {/* <!-- head --> */}
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Review</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                reviews.map(eachReview => <ReviewRow key={eachReview._id} eachReview={eachReview}></ReviewRow>)
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
                 <button className="btn btn-primary"><Link to={`/commentform/${_id}`}>Add Comment</Link></button>
             </div>
 
