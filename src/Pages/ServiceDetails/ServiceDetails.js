@@ -4,6 +4,8 @@ import useTitle from '../../hooks/useTitle';
 import './ServiceDetails.css'
 import { AuthContext } from '../../Context/AuthProvider';
 import ReviewRow from './ReviewRow';
+import 'react-photo-view/dist/react-photo-view.css';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const ServiceDetails = () => {
     useTitle('ServiceDetails')
@@ -28,7 +30,12 @@ const ServiceDetails = () => {
 
             <div className="grid gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-1 details">
                 <div>
-                    <figure><img className='w-64 rounded-lg  pl-6' src={img} alt="Album" /></figure>
+                    <PhotoProvider>
+                        <PhotoView src={img}>
+                            <figure><img className='w-64 rounded-lg  pl-6' src={img} alt="Album" /></figure>
+                        </PhotoView>
+                    </PhotoProvider>
+                    {/* <figure><img className='w-64 rounded-lg  pl-6' src={img} alt="Album" /></figure> */}
                 </div>
 
                 <div className="card-body">
