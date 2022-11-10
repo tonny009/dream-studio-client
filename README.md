@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+This project is a full stack responsive project which has been built with React JS, HTML, JavaScript, Tailwind and Bootstrap in front end and node,express, MongoDB as backend database. The theme of the project is Someone’s Photography Website . Here are the full description of my project:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+•	There is a main home page which users can see first  if they go to the website link
 
-## Available Scripts
+•	In the home page there are navbar, header, footer, slider and 4 sections like About Us, All services, Contact Message Section.
 
-In the project directory, you can run:
+•	In ‘Our Services Section’ ,  there can be seen only 3 services cards and clicking the “View All Services” it takes other route and all services cards can be seen
 
-### `npm start`
+•	In each service card there are important information about the services and there is a button “View Details” by clicking which we can visit another dynamic route of that particular service which shows full details and all reviews about the service. There is also a “Add Review “ button  where user can add the review only if the user is logged in .
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+•	In each service card there is a service picture by clicking which we can see the picture in full page with large size.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+•	There are also some protected pages where user has not the access without login named :
+      -	“My Reviews”: Here user can seen his/her all comments with delete and edit button and they can edit/delete their comments also .
+      -	“Add Services”: In this page owner can add any new services to database
 
-### `npm test`
+•	In review section reviews are displayed in descending order by time (newest review show first) and also in each review row reviewer name, service name, reviewer image and review text are displayed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+•	In my review route for highest security purpose JWT authentication system applied 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+•	Further login and signup are implemented with proper authentication with “Firebase” and there is also option for social login authentication(with google account) 
