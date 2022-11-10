@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 import './CommentForm.css'
@@ -83,6 +83,9 @@ const CommentForm = (props) => {
 
                 <Button variant="primary" type="Add">
                     Submit
+                </Button>
+                <Button className='ml-20' variant="primary" type="Add">
+                    <Link to={`/servicedetails/${_id}`}>Go Back</Link>
                 </Button>
             </Form>
         </div>

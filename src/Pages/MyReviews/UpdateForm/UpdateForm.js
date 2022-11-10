@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Navigate, useLoaderData, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 
 const UpdateForm = () => {
@@ -24,7 +24,6 @@ const UpdateForm = () => {
     }, [user?.email])
 
     const handleUpdate = event => {
-        console.log('comed');
         event.preventDefault();
         const form = event.target;
         const updatedreview = form.rvwText.value;
@@ -43,6 +42,7 @@ const UpdateForm = () => {
                 if (data.acknowledged) {
                     alert('Your Review Updated.')
                     form.reset();
+                    navigate('/myReviews')
                 }
                 if (data.modifiedCount > 0) {
                     const remaining = Reviews.filter(rvws => rvws._id !== _id);
@@ -56,7 +56,7 @@ const UpdateForm = () => {
 
     return (
         <div className='mb-9'>
-            <h2 className='text-2xl font-bold text-center w-auto rvw-title p-2 mb-10'>Add Your Review Here</h2>
+            <h2 className='text-2xl font-bold text-center w-auto rvw-title p-2 mb-10'>Update Your Review</h2>
             <Form onSubmit={handleUpdate} className='rvw-form w-96 mx-auto p-5'>
 
                 <Form.Group className="mb-3 " controlId="formBasicEmail">
@@ -69,7 +69,7 @@ const UpdateForm = () => {
                     <Form.Control defaultValue={review.review} required name="rvwText" as="textarea" className='textarea textarea-info w-80' rows={3} />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="Add">
                     Update
                 </Button>
             </Form>
