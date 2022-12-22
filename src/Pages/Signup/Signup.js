@@ -4,6 +4,7 @@ import { AuthContext } from '../../Context/AuthProvider';
 import { setAuthToken } from './GettokenCmnCode';
 import img from '../../assets/register.jpg'
 import useTitle from '../../hooks/useTitle';
+import { toast } from 'react-hot-toast';
 
 const Signup = () => {
 
@@ -32,12 +33,13 @@ const Signup = () => {
                 setRegisterSuccess("Successfully Registered! ")
                 form.reset();
                 handleUpdateUserProfile(name, photoURL);
+                toast.success('Successfully registered!')
                 navigate('/home')
             })
             .catch(err => {
                 console.error(err)
-                setRegisterSuccess("Sorry ...There are some problem");
-                setError(err.message)
+                setRegisterSuccess("");
+                setError("Give valid email /inputs .....")
             });
     }
 
@@ -86,10 +88,10 @@ const Signup = () => {
 
                         </div>
                         <div className='text-danger'>
-                            <strong className='fs-5'>{error}</strong>
+                            <strong className='fs-5 text-red-600'>{error}</strong>
                         </div>
                         <div className='text-danger'>
-                            <strong className='fs-5'>{registerSuccess}</strong>
+                            <strong className='fs-5 text-green-700'>{registerSuccess}</strong>
                         </div>
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Sign Up" />

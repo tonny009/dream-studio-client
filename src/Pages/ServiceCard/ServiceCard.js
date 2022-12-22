@@ -14,12 +14,10 @@ const ServiceCard = ({ service }) => {
                     <figure><img className='w-64 rounded-lg h-60 pl-4' src={img} alt="Album" /></figure>
                 </PhotoView>
             </PhotoProvider>
-            {/* <figure><img className='w-44 rounded-lg h-60 pl-4' src={img} alt="Album" /></figure> */}
+
             <div className="card-body">
                 <h2 className="card-title">{serviceName}</h2>
                 <p>
-                    {/* {console.log(typeof(description))} */}
-
                     {
                         description?.length > 100 ?
                             <p className='text-left'>{description.slice(0, 100) + '...'}</p>

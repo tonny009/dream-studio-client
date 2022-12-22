@@ -2,11 +2,13 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useContext } from 'react';
 import { Button } from 'react-bootstrap';
+import { toast } from 'react-hot-toast';
 import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logImg from '../../assets/login.jpg'
 import { AuthContext } from '../../Context/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+
 import './Login.css'
 
 const Login = () => {
@@ -30,8 +32,7 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user.email);
-
+                toast.success('Successfully loged in!')
                 const currentUser = {
                     email: user.email
                 }
@@ -48,6 +49,7 @@ const Login = () => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data);
+
                         localStorage.setItem('genius-token', data.token);
                         navigate(from, { replace: true });
                     })
@@ -98,12 +100,14 @@ const Login = () => {
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
+                            <p><strong className='fs-5 text-red-600'>{error}</strong></p>
+
                         </div>
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Login" />
                         </div>
                         <div className="form-control mt-6">
-                            <p><strong className='fs-5 '>{error}</strong></p>
+
                             <Button className='login-others-btn loginbtn' onClick={handleGoogleSignIn} variant="outline-primary"><FaGoogle></FaGoogle>  Log in With Google</Button>
                         </div>
                     </form>
